@@ -1,7 +1,7 @@
 <?php
 
 class comment {
-	function add(){
+	static function add(){
 
 		global $request;
 
@@ -9,8 +9,6 @@ class comment {
 		$data['comment_author'] = $request->post['comment_author'];
 		$data['comment_text'] = $request->post['comment_text'];
 
-		insert('comment', $data, TRUE);
+		insert('comment', $data);
 	}
 }
-
-$comment = new comment;

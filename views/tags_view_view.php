@@ -1,3 +1,4 @@
+<h2><?=$tag_name?></h2>
 <? foreach ($posts as $post): ?>
 	<div class="row">
 		<div class="span8">

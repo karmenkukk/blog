@@ -1,3 +1,4 @@
+<h2></h2>
 <? foreach ($posts as $post): ?>
 	<div class="row">
 		<div class="span8">
@@ -27,8 +28,7 @@
 					<p></p>
 
 					<p>
-						<i class="icon-user"></i> by <a href="<?= BASE_URL ?>users/view/<?= $post['user_id']
-						?>"><?=$post['username']?></a>
+						<i class="icon-user"></i> by <a href="#"><?=$post['username']?></a>
 						| <i class="icon-calendar"></i> <?= $post['post_time'] ?>
 						| <i class="icon-comment"></i> <a
 							href="<?= BASE_URL ?>posts/view/<?= $post['post_id'] ?>"><?=$post['comment_count']?></a>
