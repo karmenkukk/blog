@@ -9,27 +9,30 @@
 	}
 </script>
 <span class="span6">
-<table>
+<table align=center>
 	<tr>
-		<td><h2><?=$post['post_subject']?></h2></td>
+		<td><h2><a class="btn btn-large btn-primary disabled" href=<?BASE_URL?>posts/view/<?=$post["post_id"]?>><?=$post["post_subject"]?></a></h2></td>
 	</tr>
 	<tr>
-		<td><?=$post['post_text']?></td>
+		<td><div class="alert alert-info"><?=$post["post_text"]?></<div></td>
 	</tr>
-	<tr style="height: 60px">
-		<td>&nbsp;</td>
+	<tr>
+		<td style="height: 60px;">&nbsp;</td>
 	</tr>
 </table>
 <h2>Kommentaarid</h2>
-<table class="table">
-	<? foreach ($comments as $comment): ?>
+<table align=center>
+	<? foreach ($comments as $comment) : ?>
+
 		<tr>
-			<td><?=$comment['comment_author']?><br>
-				<?=$comment['comment_time']?>
-			</td>
-			<td><?=$comment['comment_text']?></td>
+			<td><?=$comment["username"]?><br>
+				<?=$comment["comment_time"]?></td>
+
+			<td><?=$comment["comment_text"]?></td>
 		</tr>
-	<? endforeach?>
+
+	<? endforeach ?>
+
 </table>
 <form method="post" id="form">
 	<input type="text" name="comment_author" placeholder="Nimi"/>
