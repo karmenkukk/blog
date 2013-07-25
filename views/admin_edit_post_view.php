@@ -10,15 +10,17 @@
 </script>
 <span class="span6">
 <table>
+	<form method="post">
 	<tr>
-		<td><h2><?=$post['post_subject']?></h2></td>
+		<td><h2><input name="post_subject" type="text" value="<?=$post['post_subject']?>"/></h2></td>
 	</tr>
 	<tr>
-		<td><?=$post['post_text']?></td>
+		<td><textarea name="post_text" id="" cols="30" rows="10"><?=$post['post_text']?></textarea></td>
 	</tr>
 	<tr style="height: 60px">
-		<td>&nbsp;</td>
+		<td><button type="submit">Salvesta</button></td>
 	</tr>
+	</form>
 </table>
 <h2>Kommentaarid</h2>
 <table class="table">

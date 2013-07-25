@@ -20,6 +20,9 @@
 					</p>
 
 					<p><a class="btn" href="<?= BASE_URL ?>posts/view/<?= $post['post_id'] ?>">Read more</a></p>
+					<p><a class="btn" href="<?= BASE_URL ?>admin/edit_post/<?= $post['post_id'] ?>">Muuda</a></p>
+					<p><a class="btn btn-danger" href="<?= BASE_URL ?>admin/index/delete/<?= $post['post_id']
+						?>"><i class="icon-trash"></i> Kustuta</a></p>
 				</div>
 			</div>
 			<div class="row">
